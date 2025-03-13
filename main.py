@@ -1,12 +1,15 @@
 import keyword
 import string
 
-test_list = ["get_value"]
+test_list = [""]
 
 is_valid = True
 
 for name in test_list:
     if " " in name:
+        is_valid = False
+        break
+    elif not name:
         is_valid = False
         break
     elif name in keyword.kwlist:
